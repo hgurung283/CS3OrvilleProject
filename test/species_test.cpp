@@ -12,7 +12,8 @@
 #include <random>
 
 // Namespace to prevent global name clash
-namespace {
+namespace 
+{
   time_t now = time(NULL);
   unsigned int seed = std::localtime(&now)->tm_sec;
   char name[10];
@@ -21,19 +22,22 @@ namespace {
 // Random data for tests
 #define HEIGHT() (5.0 + (rand_r(&seed) % 16) / 10.0)
 #define WEIGHT() (100 + (rand_r(&seed) % 200))
-const char *crazyName() {
+const char *crazyName() 
+{
   snprintf(name, sizeof(name), "crazy-%2d", seed);
   return name;
 }
 
 // Test Eevak
-TEST(species, eevak) {
+TEST(species, eevak) 
+{
   // Default.
   Eevak eevak;
   EXPECT_FALSE(eevak.isRunning());
 
   // Must not be humaoid.
   EXPECT_FALSE((std::is_base_of<Humanoid, Eevak>::value));
+
 
   // Check running.
   eevak.run();
@@ -113,7 +117,8 @@ TEST(species, kaylon) {
 }
 
 // Test Moclan
-TEST(species, moclan) {
+TEST(species, moclan) 
+{
   double height = HEIGHT();
   double weight = WEIGHT();
 
