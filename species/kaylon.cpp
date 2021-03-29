@@ -1,5 +1,20 @@
-#define Kaylon
-class Kaylon
+/**
+ * Copyright Notice:
+ * Author: Hari Ram Gurung
+ * All rights reserved;
+ * **/
+#include"species/kaylon.h"
+Human::Human(double w, double h) : Humanoid(w,h)
+Kaylon:Kaylon() : isFiring(false)
 {
-    void kaylon(6, 60)
 }
+bool Kaylon::startFiring()
+{
+  return  true;
+}
+bool Kaylon::stopFiring()
+{
+  return false;
+}
+
+#endf;

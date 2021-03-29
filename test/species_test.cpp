@@ -28,7 +28,7 @@ const char *crazyName()
   return name;
 }
 
-// Test Eevak
+Test Eevak
 TEST(species, eevak) 
 {
   // Default.
@@ -95,7 +95,7 @@ TEST(species, human) {
   EXPECT_TRUE((std::is_base_of<Humanoid, Human>::value));
 }
 
-// Test Kaylon
+//Test Kaylon
 TEST(species, kaylon) {
   double height = HEIGHT();
   double weight = WEIGHT();
